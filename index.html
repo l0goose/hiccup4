@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books</title>
+  <link rel="stylesheet" href="styles.css?v=4" />
+</head>
+<body>
+<header class="site-header">
+    <nav class="container nav">
+        <a href="index.html">Home</a>
+	  <a href="Git.html">Code</a>
+	  <div class="dropdown">
+	  <a class="dropbtn">Projects</a>
+		 <div class="dropdown-content">
+				<a href="woodworking.html">Woodworking</a>
+				<a href="foraging.html">Foraging</a>
+				<a href="20lustri.html">20 Lustri</a>
+				<a href="open-lab.html">Open Lab</a>
+			</div>
+  </div>
+  <a href="learning.html">Learning</a>
+	<div class="dropdown">
+	  <a class="dropbtn">About</a>
+	  <div class="dropdown-content">
+		  <a href="about.html">Me</a>
+		  <a href="playlists.html">Playlists</a>
+		  <a href="books.html">Books</a>
+		  <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Books Worth Reading</h2>
+    <p class="muted">Books that shaped my thinking.</p>
+
+    <section class="books grid auto-150 spacer-6">
+      <!-- Use forward slashes in paths -->
+      <article class="book"><img src="images/book-covers/717YwWoQsBL._UF1000,1000_QL80_.jpg" alt="Shantaram cover" /><p>Shantaram — Gregory David Roberts</p></article>
+      <article class="book"><img src="images/book-covers/selfish_gene_cover.jpg" alt="The Selfish Gene cover" /><p>The Selfish Gene — Richard Dawkins</p></article>
+      <article class="book"><img src="images/book-covers/stupidi_intenti_cover.jpg" alt="I miei stupidi intenti cover" /><p>I miei stupidi intenti — Bernardo Zannoni</p></article>
+      <article class="book"><img src="images/book-covers/prisoners_geo_cover.jpg" alt="Prisoners of Geography cover" /><p>Prisoners of Geography — Tim Marshall</p></article>
+      <article class="book"><img src="images/book-covers/no_paura.jpg" alt="Io non ho paura cover" /><p>Io non ho paura — Niccolò Ammaniti</p></article>
+      <article class="book"><img src="images/book-covers/doors_perception_cover.jpg" alt="The Doors of Perception cover" /><p>The Doors of Perception — Aldous Huxley</p></article>
+      <article class="book"><img src="images/book-covers/algernon.jpg" alt="Flowers for Algernon cover" /><p>Flowers for Algernon — Daniel Keyes</p></article>
+      <article class="book"><img src="images/book-covers/prince.jpg" alt="Harry Potter and the Half-Blood Prince cover" /><p>Harry Potter and the Half-Blood Prince — J.K. Rowling</p></article>
+      <article class="book"><img src="images/book-covers/god_delusion.jpg" alt="The God Delusion cover" /><p>The God Delusion — Richard Dawkins</p></article>
+      <article class="book"><img src="images/book-covers/start_why.jpg" alt="Start With Why cover" /><p>Start With Why — Simon Sinek</p></article>
+    </section>
+
+    <div class="center spacer-6">
+      <h3>Spread knowledge</h3>
+      <button class="button button--primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSf8rCJW9_r1XpC5_AQ1lBgPC67cfiPVFRRMsVKy-uRcCMAhdg/viewform?embedded=true','_blank')">Suggest a book</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2025 Augusto Liberti.</div>
+  </footer>
+</body>
+</html>
