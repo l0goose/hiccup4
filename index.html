@@ -4,28 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hiccup</title>
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
+
 <body>
-<header class="site-header">
+  <header class="site-header">
     <nav class="container nav">
-        <a href="index.html">Home</a>
+      <a href="index.html">📂</a>
     </nav>
   </header>
 
+  <!-- Audio -->
+  <audio id="music" loop>
+    <source src="media/Coirsofwinterchampion.mp3" type="audio/mpeg">
+  </audio>
+
   <main class="container">
     <h2>pictures</h2>
-    <p class="muted">balbal</p>
+    <p class="muted">hiccup</p>
 
-    <section class="books grid auto-150 spacer-6">
-      <!-- Use forward slashes in paths -->
-      <article class="book"><img src="images/Pigshirt2.jpg" alt="Pigshirt" /><p>Shantaram — Gregory David Roberts</p></article>
-      <article class="book"><img src="images/Pigshirt.jpg"</article>
-    </section>
+    <div class="row">
+      <div class="column">
+        <!-- This image triggers music when visible -->
+        <img src="images/Pigshirt2.jpg" alt="Pigshirt 2" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="images/Pigshirt.jpg" alt="Pigshirt" style="width:100%">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img src="images/skuuhelmet.jpg" alt="Helmet" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img id="triggerImage" src="images/PinkSkullPatch.jpg" alt="Pink Skull Patch" style="width:100%">
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">&copy; 2025 Augusto Liberti.</div>
+    <div class="container">&copy; go on</div>
   </footer>
+
+  <script>
+    const music = document.getElementById("music");
+    const triggerImage = document.getElementById("triggerImage");
+
+    let started = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+
+          music.play().catch(() => {
+            // Browser blocked autoplay, play on first click
+            document.body.addEventListener("click", () => {
+              music.play();
+            }, { once: true });
+          });
+
+          observer.disconnect();
+        }
+      });
+    }, {
+      threshold: 0.8
+    });
+
+    observer.observe(triggerImage);
+  </script>
 </body>
 </html>
